@@ -1,0 +1,28 @@
+<!Doctype html>
+
+<html>
+
+
+<head>
+
+    <h1 align="center"> Payment Gateway</h1>
+
+</head>
+
+
+<body>
+<div align="center">
+  <form method="post" action=".">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit" >submit </button>
+
+
+</div>
+
+  </form>
+
+</body>
+
+
+ </html>

@@ -1,0 +1,23 @@
+<!Doctype html>
+
+<html>
+
+<head>
+   <h1> Post your Item</h1>
+</head>
+
+
+<body>
+
+
+   <form method="post" action=" ">
+       {% csrf_token %}
+       {{form.as_p}}
+       <button type="submit"> Post Medicine for sell</button>
+   </form>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,28 @@
+<!Doctype html>
+
+<html>
+
+<head>
+    <h1> Customer Login Page </h1>
+</head>
+
+
+<body>
+
+ <form method="post" action=" ">
+     {% csrf_token %}
+     {{form.as_p}}
+      <a href={% url 'shopkeeperlogin' %}> Shop Keeper Login </a><br>
+
+      <button type="submit"> Login </button>
+ </form>
+
+
+
+</body>
+
+
+
+
+
+</html>

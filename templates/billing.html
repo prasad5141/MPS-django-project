@@ -1,0 +1,30 @@
+<html>
+
+
+<head>
+
+        <h1 align="center"> Payment Gateway </h1>
+
+
+</head>
+
+
+<body>
+ <div align="center ">
+     <form method="post" action=".">{% csrf_token %}
+       {% if bill_item %}
+       Medicine Name:{{bill_item.medicineName}}<br><br>
+       Price:{{bill_item.medicineprice}}<br><br>
+       Discount:{{discount}}% <br><br>
+       PayablePrice:{{payable_price}}<br><br>
+       Tax :<h3 style="display:inline;"> 0 % </h3><hr>
+        {{form.as_p}}
+       {% endif %}
+         <a href="{% url 'pay' %}" type="button">Proceed to Pay </a> <br><br>
+
+     </form>
+</div>
+</body>
+
+
+</html>
